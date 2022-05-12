@@ -9,10 +9,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Lección 1 Enum Classes
+
         //enumClases()
         //RepartirCartas()
         //calcular()
-        diasDeLaSemana()
+        //diasDeLaSemana()
+
+        //lECCIÓN 2 NESTED AND INNER CLASSES
+        nestedAndInnerClasses()
+
+
+
     }
 
     enum class Direccion(val dir : Int){
@@ -126,6 +133,21 @@ private fun diasDeLaSemana(){
     }
 
 }
+    /////////////// Lección 2 NESTED CLASSES AND INNER CLASSES ////////////////////////////////////////////////////////
 
+private fun nestedAndInnerClasses(){
+
+    //clase Anidada (nested)
+
+    val myNestedClass = MyNestedAndInnerClass.MyNestedClass()
+    val sum=myNestedClass.sum(10,5)
+    println(sum)
+
+    //Clase Interna (inner)
+    val myInnerClass = MyNestedAndInnerClass().MyInnerClass()
+    val sumTwo = myInnerClass.sumTwo(10)
+    println("El resultado de sumar dos es $sumTwo")
+
+}
 
 }
