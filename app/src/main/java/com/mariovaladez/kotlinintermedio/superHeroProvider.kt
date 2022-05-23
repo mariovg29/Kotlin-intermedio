@@ -6,61 +6,61 @@ class superHeroProvider {
 
             SuperHero(
                 "Mario",
-                "Valadez",
+                "Valadez1",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Pepe",
-                "Valadez",
+                "Valadez2",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Luis",
-                "Valadez",
+                "Valadez3",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Antonio",
-                "Valadez",
+                "Valadez4",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Rasta",
-                "Valadez",
+                "Valadez5",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Mario",
-                "Valadez",
+                "Valadez6",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Pepe",
-                "Valadez",
+                "Valadez7",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Luis",
-                "Valadez",
+                "Valadez8",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Antonio",
-                "Valadez",
+                "Valadez9",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
             SuperHero(
                 "Rasta",
-                "Valadez",
+                "Valadez10",
                 "Guerrero",
                 "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
             ),
