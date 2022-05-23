@@ -19,26 +19,16 @@ class SuperHeroeViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
 
 
-    fun render(superheroModel: SuperHero){
+    fun render(superheroModel: SuperHero, onClickListener: (SuperHero) -> Unit){
 
         binding.tvSuperheroName.text = superheroModel.superHeroName
         binding.tvRealName.text = superheroModel.realname
         binding.tvPublisher.text = superheroModel.publisher
         Glide.with(binding.ivSpuerHeroeImage.context).load(superheroModel.image).into(binding.ivSpuerHeroeImage)
-        binding.ivSpuerHeroeImage.setOnClickListener {
-            Toast.makeText(
-                binding.ivSpuerHeroeImage.context,
-                superheroModel.realname,
-                Toast.LENGTH_SHORT)
-                .show()
-        }
+
 
         itemView.setOnClickListener {
-            Toast.makeText(
-                binding.ivSpuerHeroeImage.context,
-                superheroModel.superHeroName,
-                Toast.LENGTH_SHORT)
-                .show()
+            onClickListener(superheroModel)
 
         }
     }

@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mariovaladez.kotlinintermedio.R
 import com.mariovaladez.kotlinintermedio.SuperHero
 
-class superHeroAdapter(private val superheroeList:List<SuperHero>) : RecyclerView.Adapter<SuperHeroeViewHolder>() {
+class superHeroAdapter(private val superheroeList:List<SuperHero>, private val onClickListener:(SuperHero)->Unit) : RecyclerView.Adapter<SuperHeroeViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuperHeroeViewHolder {
 
@@ -18,7 +18,7 @@ class superHeroAdapter(private val superheroeList:List<SuperHero>) : RecyclerVie
     override fun onBindViewHolder(holder: SuperHeroeViewHolder, position: Int) {
 
         val item = superheroeList[position]
-        holder.render(item)
+        holder.render(item, onClickListener)
 
     }
 

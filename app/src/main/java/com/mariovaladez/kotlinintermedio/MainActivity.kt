@@ -2,6 +2,7 @@ package com.mariovaladez.kotlinintermedio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mariovaladez.kotlinintermedio.adapter.superHeroAdapter
@@ -39,8 +40,17 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.rvsuperHero.layoutManager = LinearLayoutManager(this)
-        binding.rvsuperHero.adapter = superHeroAdapter(superHeroProvider.superHeroeList)
+        binding.rvsuperHero.adapter = superHeroAdapter(superHeroProvider.superHeroeList) { superhero ->
+            onItemSelected(
+                superhero
+            )
+        }
 
+
+    }
+
+    fun onItemSelected(superHero: SuperHero){
+        Toast.makeText(this, superHero.superHeroName, Toast.LENGTH_SHORT).show()
 
     }
 
