@@ -18,8 +18,9 @@ class MyNestedAndInnerClass {
     inner class MyInnerClass{
         fun sumTwo(number: Int): Int{
             return number+1+returnOne()
-
         }
+        fun metodo()= println(this@MyNestedAndInnerClass.returnOne())
+
 
     }
 }

@@ -1,0 +1,69 @@
+package com.mariovaladez.kotlinintermedio
+
+class superHeroProvider {
+    companion object{
+        val superHeroeList = listOf<SuperHero>(
+
+            SuperHero(
+                "Mario",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Pepe",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Luis",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Antonio",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Rasta",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Mario",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Pepe",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Luis",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Antonio",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+            SuperHero(
+                "Rasta",
+                "Valadez",
+                "Guerrero",
+                "https://cdn.pixabay.com/photo/2022/05/11/07/10/porridge-7188630_960_720.jpg"
+            ),
+        )
+    }
+}

@@ -2,11 +2,19 @@ package com.mariovaladez.kotlinintermedio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.mariovaladez.kotlinintermedio.adapter.superHeroAdapter
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         setContentView(R.layout.activity_main)
+        initRecyclerView()
+
+
 
         //Lección 1 Enum Classes
 
@@ -16,8 +24,17 @@ class MainActivity : AppCompatActivity() {
         //diasDeLaSemana()
 
         //lECCIÓN 2 NESTED AND INNER CLASSES
-        nestedAndInnerClasses()
+        //nestedAndInnerClasses()
 
+
+
+    }
+
+    fun initRecyclerView(){
+
+        val recyclerview = findViewById<RecyclerView>(R.id.rvsuperHero )
+        recyclerview.layoutManager = LinearLayoutManager(this)
+        recyclerview.adapter = superHeroAdapter(superHeroProvider.superHeroeList)
 
 
     }
@@ -147,6 +164,7 @@ private fun nestedAndInnerClasses(){
     val myInnerClass = MyNestedAndInnerClass().MyInnerClass()
     val sumTwo = myInnerClass.sumTwo(10)
     println("El resultado de sumar dos es $sumTwo")
+    MyNestedAndInnerClass().MyInnerClass().metodo()
 
 }
 
