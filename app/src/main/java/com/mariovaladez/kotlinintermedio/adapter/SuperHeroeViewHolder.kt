@@ -7,22 +7,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.mariovaladez.kotlinintermedio.R
 import com.mariovaladez.kotlinintermedio.SuperHero
+import com.mariovaladez.kotlinintermedio.databinding.ItemSuperheroeBinding
 
 class SuperHeroeViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
-    val superHero = view.findViewById<TextView>(R.id.tvSuperheroName)
-    val realName = view.findViewById<TextView>(R.id.tvRealName)
-    val publisher = view.findViewById<TextView>(R.id.tvPublisher)
-    val image = view.findViewById<ImageView>(R.id.ivSpuerHeroeImage)
+    val binding = ItemSuperheroeBinding.bind(view)
+
+
 
 
 
 
     fun render(superheroModel: SuperHero){
 
-        superHero.text = superheroModel.superHeroName
-        realName.text = superheroModel.realname
-        publisher.text = superheroModel.publisher
-        Glide.with(image.context).load(superheroModel.image).into(image)
+        binding.tvSuperheroName.text = superheroModel.superHeroName
+        binding.tvRealName.text = superheroModel.realname
+        binding.tvPublisher.text = superheroModel.publisher
+        Glide.with(binding.ivSpuerHeroeImage.context).load(superheroModel.image).into(binding.ivSpuerHeroeImage)
     }
 }

@@ -5,13 +5,18 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mariovaladez.kotlinintermedio.adapter.superHeroAdapter
+import com.mariovaladez.kotlinintermedio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
 
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         initRecyclerView()
 
 
@@ -32,9 +37,9 @@ class MainActivity : AppCompatActivity() {
 
     fun initRecyclerView(){
 
-        val recyclerview = findViewById<RecyclerView>(R.id.rvsuperHero )
-        recyclerview.layoutManager = LinearLayoutManager(this)
-        recyclerview.adapter = superHeroAdapter(superHeroProvider.superHeroeList)
+
+        binding.rvsuperHero.layoutManager = LinearLayoutManager(this)
+        binding.rvsuperHero.adapter = superHeroAdapter(superHeroProvider.superHeroeList)
 
 
     }
