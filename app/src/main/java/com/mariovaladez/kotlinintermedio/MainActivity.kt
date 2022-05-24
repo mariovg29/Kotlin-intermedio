@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mariovaladez.kotlinintermedio.adapter.superHeroAdapter
@@ -38,12 +39,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initRecyclerView(){
-        val manager = LinearLayoutManager(this)
+        val manager = GridLayoutManager(this,2)
 
         val decoration = DividerItemDecoration(this, manager.orientation )
-        binding.rvsuperHero.layoutManager = LinearLayoutManager(this)
+        binding.rvsuperHero.layoutManager = manager
         binding.rvsuperHero.adapter = superHeroAdapter(superHeroProvider.superHeroeList) { superhero ->
             onItemSelected(
+
                 superhero
             )
         }
