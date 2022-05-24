@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun initRecyclerView(){
-        val manager = GridLayoutManager(this,2)
+        val manager = LinearLayoutManager(this,)
 
         val decoration = DividerItemDecoration(this, manager.orientation )
         binding.rvsuperHero.layoutManager = manager
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                 superhero
             )
         }
-        binding.rvsuperHero.addItemDecoration(decoration)
+
 
 
     }
