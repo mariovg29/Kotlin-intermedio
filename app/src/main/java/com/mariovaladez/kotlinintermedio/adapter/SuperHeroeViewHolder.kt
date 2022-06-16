@@ -14,11 +14,6 @@ class SuperHeroeViewHolder(view: View):RecyclerView.ViewHolder(view) {
 
     val binding = ItemSuperheroeBinding.bind(view)
 
-
-
-
-
-
     fun render(superheroModel: SuperHero, onClickListener: (SuperHero) -> Unit){
 
         binding.tvSuperheroName.text = superheroModel.superHeroName

@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mariovaladez.kotlinintermedio.adapter.superHeroAdapter
 import com.mariovaladez.kotlinintermedio.databinding.ActivityMainBinding
+import com.mariovaladez.kotlinintermedio.herencia.Designer
+import com.mariovaladez.kotlinintermedio.herencia.Programmer
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,9 +36,14 @@ class MainActivity : AppCompatActivity() {
         //lECCIÓN 2 NESTED AND INNER CLASSES
         //nestedAndInnerClasses()
 
+        //LECCIÓN 3 HERENCIA
+        herencia()
+
 
 
     }
+
+
 
     fun initRecyclerView(){
         val manager = LinearLayoutManager(this,)
@@ -187,5 +194,16 @@ private fun nestedAndInnerClasses(){
     MyNestedAndInnerClass().MyInnerClass().metodo()
 
 }
+
+
+}
+private fun herencia() {
+    val programmer = Programmer("Mario", 17, "Kotlin")
+    programmer.work()
+    programmer.sayLanguage()
+    programmer.goToWork()
+    programmer.drive()
+    val designer = Designer("Pepe", 33)
+    designer.work()
 
 }
