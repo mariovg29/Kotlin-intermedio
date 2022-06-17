@@ -13,6 +13,7 @@ import com.mariovaladez.kotlinintermedio.herencia.Designer
 import com.mariovaladez.kotlinintermedio.herencia.Persona
 import com.mariovaladez.kotlinintermedio.herencia.Programmer
 import com.mariovaladez.kotlinintermedio.interfaces.Game
+import com.mariovaladez.kotlinintermedio.visibility_modifier.Visibility2
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,7 +43,11 @@ class MainActivity : AppCompatActivity() {
         //herencia()
 
         //Leccion 4 Interfaces
-        interfaces()
+        //interfaces()
+
+        //Leccion 5 Modificadores de visibilidad
+        modificadores()
+
 
 
 
@@ -216,5 +221,16 @@ private fun interfaces(){
     val gamer = Persona("Mario", 33)
     gamer.play()
     gamer.stream()
+
+}
+
+private fun modificadores(){
+    //val visibility = Visibility()
+    //visibility.name = "Mario"
+    //visibility.sayMyName()
+    //visibility.name = null
+
+    val visibility2 = Visibility2()
+   // visibility2.sayMyName2
 
 }
