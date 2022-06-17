@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.mariovaladez.kotlinintermedio.adapter.superHeroAdapter
 import com.mariovaladez.kotlinintermedio.databinding.ActivityMainBinding
 import com.mariovaladez.kotlinintermedio.herencia.Designer
+import com.mariovaladez.kotlinintermedio.herencia.Persona
 import com.mariovaladez.kotlinintermedio.herencia.Programmer
+import com.mariovaladez.kotlinintermedio.interfaces.Game
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,7 +39,10 @@ class MainActivity : AppCompatActivity() {
         //nestedAndInnerClasses()
 
         //LECCIÓN 3 HERENCIA
-        herencia()
+        //herencia()
+
+        //Leccion 4 Interfaces
+        interfaces()
 
 
 
@@ -205,5 +210,11 @@ private fun herencia() {
     programmer.drive()
     val designer = Designer("Pepe", 33)
     designer.work()
+
+}
+private fun interfaces(){
+    val gamer = Persona("Mario", 33)
+    gamer.play()
+    gamer.stream()
 
 }
