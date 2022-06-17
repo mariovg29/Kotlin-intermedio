@@ -4,15 +4,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.mariovaladez.kotlinintermedio.adapter.superHeroAdapter
 import com.mariovaladez.kotlinintermedio.databinding.ActivityMainBinding
+import com.mariovaladez.kotlinintermedio.dataclases.Worker
 import com.mariovaladez.kotlinintermedio.herencia.Designer
 import com.mariovaladez.kotlinintermedio.herencia.Persona
 import com.mariovaladez.kotlinintermedio.herencia.Programmer
-import com.mariovaladez.kotlinintermedio.interfaces.Game
+import com.mariovaladez.kotlinintermedio.nestedandinnerclasses.MyNestedAndInnerClass
 import com.mariovaladez.kotlinintermedio.visibility_modifier.Visibility2
 
 class MainActivity : AppCompatActivity() {
@@ -46,7 +45,10 @@ class MainActivity : AppCompatActivity() {
         //interfaces()
 
         //Leccion 5 Modificadores de visibilidad
-        modificadores()
+        //modificadores()
+
+        //Leccion 6 Dataclasses
+        dataClases()
 
 
 
@@ -232,5 +234,41 @@ private fun modificadores(){
 
     val visibility2 = Visibility2()
    // visibility2.sayMyName2
+
+}
+
+private fun dataClases(){
+    val trabajador = Worker("Mario", 33, "Nada")
+    trabajador.lastWork = "Junior"
+
+    val trabajador2 = Worker()
+
+    val trabajador3 = Worker("Mario", 33, "Nada")
+    trabajador.lastWork = "Junior"
+
+    //equals & HasCode
+    if(trabajador.equals(trabajador3)){
+        println("son iguales")
+    }else{
+        println("No son iguales")
+    }
+
+    //toString
+    println("metodo toString: "+trabajador3.toString())
+
+    //copy
+    val mario = trabajador3.copy(age =37)
+    println("Metodo Copy: "+trabajador.toString())
+    println(mario.toString())
+
+    //componentN
+    val (name,age) = trabajador3
+    println(name)
+    println(age)
+
+
+
+
+
 
 }

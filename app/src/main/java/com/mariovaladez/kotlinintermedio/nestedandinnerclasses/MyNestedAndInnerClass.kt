@@ -1,4 +1,4 @@
-package com.mariovaladez.kotlinintermedio
+package com.mariovaladez.kotlinintermedio.nestedandinnerclasses
 
 class MyNestedAndInnerClass {
     private val one = 1
