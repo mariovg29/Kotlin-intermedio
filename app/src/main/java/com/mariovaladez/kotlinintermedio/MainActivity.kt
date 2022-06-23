@@ -14,6 +14,10 @@ import com.mariovaladez.kotlinintermedio.herencia.Programmer
 import com.mariovaladez.kotlinintermedio.nestedandinnerclasses.MyNestedAndInnerClass
 import com.mariovaladez.kotlinintermedio.visibility_modifier.Visibility2
 
+typealias  myMapList = MutableMap<Int, ArrayList<String>>
+typealias  MyFun = (Int,String, myMapList)->Boolean
+typealias myNestedClass = MyNestedAndInnerClass.MyNestedClass
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -48,7 +52,10 @@ class MainActivity : AppCompatActivity() {
         //modificadores()
 
         //Leccion 6 Dataclasses
-        dataClases()
+        //dataClases()
+
+        //Leccion 7 Dataclasses
+        typeAliases()
 
 
 
@@ -266,9 +273,18 @@ private fun dataClases(){
     println(name)
     println(age)
 
+}
 
+/////////////////////////////////////////////////////
+////Lección 7 Kotlin Intermedio Type Aliases
 
+private var myMap: myMapList = mutableMapOf()
 
+private fun typeAliases(){
+    var myNewMap : myMapList = mutableMapOf()
+    myNewMap[1] = arrayListOf("Mario", "Valadez")
+    myNewMap[2] = arrayListOf("Pepe", "Grillo")
 
+    myMap = myNewMap
 
 }
