@@ -55,14 +55,15 @@ class MainActivity : AppCompatActivity() {
         //dataClases()
 
         //Leccion 7 Dataclasses
-        typeAliases()
+        //typeAliases()
+
+        //Leccion 8 Destructuring declarations
+        destructuring()
 
 
 
 
     }
-
-
 
     fun initRecyclerView(){
         val manager = LinearLayoutManager(this,)
@@ -287,4 +288,42 @@ private fun typeAliases(){
 
     myMap = myNewMap
 
+}
+/////////////////////////////////////////////////////
+////Lección 8 Kotlin Intermedio  Destructuring
+
+private fun destructuring(){
+    val (name, age, work) = Worker("Mario Valadez", 33, "programmer")
+    println("$name, $age, $work")
+
+    //evitar una variable que no se usará con underscore
+    val (name1, _, work1) = Worker("Mario Valadez", 33, "programmer")
+    println("$name1,$work1")
+
+    val mario = Worker ("mario valadez", 34, "Flojo")
+    println(mario.component1())
+
+    val (marioName, marioAge, marioWork)= myWorker()
+    println("$marioName, $marioAge, $marioWork")
+
+    val myMap = mapOf(1 to "Mario", 2 to "Pepe", 3 to "Ana")
+    println("destructuring 1")
+    for (name in myMap){
+
+        println("${name.key}, ${name.value}")
+    }
+    println("destructuring 2")
+    for (element in myMap){
+        println("${element.component1()}, ${element.component2()}")
+    }
+    println("destructuring 3")
+    for ((id, name) in myMap){
+        println("$id, $name")
+    }
+
+
+
+}
+private fun myWorker():Worker{
+    return Worker("mario valadez", 34, "Flojo")
 }
